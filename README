@@ -1,0 +1,25 @@
+NAME
+    YAML2 - Next Generation YAML Tools For Perl
+
+DESCRIPTION
+    YAML2 is a backwards compatible rewrite of YAML.pm. When YAML2 is done
+    and stable, the code will be duplicated as YAML.pm, and YAML2 will be
+    deprecated. At that point, you can simply "s/YAML2/YAML/g" in your code,
+    and everything will work out.
+
+    YAML2 includes pure Perl code and Extensions of libyaml.
+
+    NOTE: Currently this module does nothing useful, but is being uploaded
+    to CPAN early and often to generate visibility and discussion.
+
+AUTHOR
+    Ingy döt Net <ingy@cpan.org>
+
+COPYRIGHT
+    Copyright (c) 2007. Ingy döt Net. All rights reserved.
+
+    This program is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
+    See http://www.perl.com/perl/misc/Artistic.html
+

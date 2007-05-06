@@ -1,0 +1,13 @@
+abstract: Next Generation YAML Tools For Perl
+author: "Ingy d\xC3\xB6t Net <ingy@cpan.org>"
+distribution_type: module
+generated_by: Module::Install version 0.64
+license: perl
+name: YAML2
+no_index: 
+  directory: 
+    - inc
+    - t
+requires: 
+  perl: 5.005003
+version: 0.01

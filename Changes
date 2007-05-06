@@ -1,0 +1,5 @@
+---
+version: 0.01
+date:    Sun May  6 21:20:38 CST 2007
+changes: First version. Does nothing useful but build system for libyaml is
+  working. Get this out on CPAN early and often.

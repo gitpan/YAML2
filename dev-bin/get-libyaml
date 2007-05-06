@@ -1,0 +1,52 @@
+#!/usr/bin/env perl
+use strict;
+use IO::All;
+use XXX;
+
+my $ext = 'LibYaml';
+mysystem("rm -f $ext/*.c");
+mysystem("rm -f $ext/*.h");
+
+my ($old_src) = glob 'yaml-*';
+mysystem("rm -fr $old_src") if -d $old_src;
+
+my $src_url = 'http://pyyaml.org/download/libyaml/yaml-0.0.1.tar.gz';
+my $tarball = $src_url;
+$tarball =~ s/.*\/// or die;
+
+unless (-f $tarball) {
+    mysystem("wget $src_url");
+}
+
+mysystem("tar xzf $tarball");
+
+mysystem("rm -f $tarball");
+
+my ($yaml) = glob 'yaml-*' or die;
+
+mysystem("cd $yaml;./configure > config.output 2>&1");
+
+my @srcs = (
+    glob("$yaml/src/*.c"),
+    glob("$yaml/*.h"),
+    glob("$yaml/src/*.h"),
+    glob("$yaml/include/*.h"),
+);
+
+my $command = join '', 
+    "$^X -pi -e '",
+    's/^#define VERSION /#define YAML_VERSION /m;',
+    "' @srcs";
+mysystem($command);
+
+mysystem("cp @srcs $ext/");
+
+mysystem("rm -fr $yaml");
+
+print "Finished $yaml\n";
+
+sub mysystem {
+    my $command = shift;
+    print ">>> $command\n";
+    system($command) == 0 or die "Command failed\n";
+}
