@@ -1,4 +1,9 @@
 ---
+version: 0.02
+date:    Thu May 10 14:27:10 PDT 2007
+changes: An actual working binding to libyaml's parser.
+  YAML2::LibYaml::Load actually works!
+---
 version: 0.01
 date:    Sun May  6 21:20:38 CST 2007
 changes: First version. Does nothing useful but build system for libyaml is

@@ -9,8 +9,10 @@ DESCRIPTION
 
     YAML2 includes pure Perl code and Extensions of libyaml.
 
-    NOTE: Currently this module does nothing useful, but is being uploaded
-    to CPAN early and often to generate visibility and discussion.
+    NOTE: This implementation now has a rudimentary binding to libyaml
+    (YAML2::LibYaml) that seems to work for plain hashes, arrays and
+    scalars. This should cover all of JSON since JSON is a strict subset of
+    YAML.
 
 AUTHOR
     Ingy döt Net <ingy@cpan.org>

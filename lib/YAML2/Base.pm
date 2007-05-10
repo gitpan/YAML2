@@ -1,7 +1,6 @@
 package YAML2::Base;
 use strict;
 use Class::Field 0.10 qw'field const';
-use XXX;
 
 sub import {
     my $class = shift;

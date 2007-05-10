@@ -9,7 +9,7 @@ my $obj_files = join ' ', map {
 } glob("*.c"), 'LibYaml.c';
 
 WriteMakefile(
-    NAME => 'YAML2-LibYaml',
+    NAME => 'YAML2::LibYaml',
 #     VERSION_FROM => 'lib/YAML2/LibYaml.pm',
     PREREQ_PM => {},
     DEFINE => '-DHAVE_CONFIG_H',
